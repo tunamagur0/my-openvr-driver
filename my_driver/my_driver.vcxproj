@@ -23,6 +23,7 @@
     <ClCompile Include="..\source\dllmain.cpp" />
     <ClCompile Include="..\source\driverFactory.cpp" />
     <ClCompile Include="..\source\HMD.cpp" />
+    <ClCompile Include="..\source\Serial.cpp" />
     <ClCompile Include="..\source\ServerDriver.cpp" />
     <ClCompile Include="..\source\Tracker.cpp" />
     <ClCompile Include="..\source\WatchdogDriver.cpp" />
@@ -31,6 +32,7 @@
     <ClInclude Include="..\source\Controller.h" />
     <ClInclude Include="..\source\driverFactory.h" />
     <ClInclude Include="..\source\HMD.h" />
+    <ClInclude Include="..\source\Serial.h" />
     <ClInclude Include="..\source\ServerDriver.h" />
     <ClInclude Include="..\source\Tracker.h" />
     <ClInclude Include="..\source\WatchdogDriver.h" />

@@ -26,11 +26,11 @@ EVRInitError ServerDriver::Init(IVRDriverContext* pDriverContext)
 	VRControllerState_t test_state;
 	test_state.ulButtonPressed = test_state.ulButtonTouched = 0;
 
-	controller_left = new Controller("controller1", false, test_pose, test_state);
-	controller_right = new Controller("controller2", true, test_pose, test_state);
+	//controller_left = new Controller("controller1", false, test_pose, test_state);
+	//controller_right = new Controller("controller2", true, test_pose, test_state);
 
-	VRServerDriverHost()->TrackedDeviceAdded("controller1", vr::TrackedDeviceClass_Controller, controller_left);
-	VRServerDriverHost()->TrackedDeviceAdded("controller2", vr::TrackedDeviceClass_Controller, controller_right);
+	//VRServerDriverHost()->TrackedDeviceAdded("controller1", vr::TrackedDeviceClass_Controller, controller_left);
+	//VRServerDriverHost()->TrackedDeviceAdded("controller2", vr::TrackedDeviceClass_Controller, controller_right);
 
 	hmd = new HMD("hmd", test_pose);
 	VRServerDriverHost()->TrackedDeviceAdded("hmd", vr::TrackedDeviceClass_HMD, hmd);

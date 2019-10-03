@@ -36,6 +36,12 @@ EVRInitError HMD::Activate(uint32_t unObjectId)
 	VRProperties()->SetFloatProperty(prop_handle, Prop_SecondsFromVsyncToPhotons_Float, 0.1f);
 	VRProperties()->SetUint64Property(prop_handle, Prop_CurrentUniverseId_Uint64, 2);
 
+	// avoid "not fullscreen" warnings from vrmonitor
+	vr::VRProperties()->SetBoolProperty(prop_handle, Prop_IsOnDesktop_Bool, false);
+
+	//Debug mode activate Windowed Mode (borderless fullscreen), lock to 30 FPS 
+	vr::VRProperties()->SetBoolProperty(prop_handle, Prop_DisplayDebugMode_Bool, true);
+
 	hmd_pose_.poseIsValid = true;
 	hmd_pose_.result = TrackingResult_Running_OK;
 	hmd_pose_.deviceIsConnected = true;
