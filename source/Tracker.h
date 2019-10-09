@@ -35,9 +35,11 @@ public:
 	void Process();
 
 private:
-	bool GetRotateInfo(RotateInfo& rotate_info);
+	bool GetRotateInfo();
 	float DegreeToRadian(float degree);
 	void SubOffset();
+	float RoundAngle(float a);
+	float SubAngle(float a1, float a2);
 
 	std::mutex mtx_;
 	std::thread* thread_ = nullptr;
@@ -46,5 +48,6 @@ private:
 
 	int port_num_ = 3;
 	unsigned long baud_rate_ = CBR_115200;
+	float sensitivity_ = 1.0f;
 	RotateInfo rotate_info_, offset_;
 };
